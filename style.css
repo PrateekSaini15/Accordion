@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* =====================================
+CUSTOM PROPERTIES
+===================================== */
+:root {
+	/* font family */
+	--ff-roboto: 'Roboto', sans-serif;
+	/* font size */
+	--fs-900: 2.25rem;
+	--fs-800: 2rem;
+	--fs-700: 1.75rem;
+	--fs-600: 1.5rem;
+	--fs-500: 1.25rem;
+	--fs-400: 1rem;
+}
+
+
+
+/* =====================================
+CSS RESET
+===================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--ff-roboto);
+}
+
+body {
+	background-image: url('background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+}
+
+
+/* =====================================
+LAYOUT
+===================================== */
+
+main {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+
+
+/* =====================================
+UTILITY CLASSES
+===================================== */
+/* typography */
+.fs-400 {
+	font-size: var(--fs-400);
+}
+
+.fs-700 {
+	font-size: 32px;
+}
+
+/* colors */
+
+.bg-white {
+	background-color: white;
+}
+
+.txt-white {
+	color: white;
+}
+
+/* spacing */
+.mt-1 {
+	margin-top: 1rem;
+}
+
+
+/* =====================================
+COMPONENTS
+===================================== */
+
+.accordion {
+	border-bottom: 1px solid black;
+	padding: 0em 0.4em 1em 0.4em;
+}
+
+.accordion__heading {
+	font-weight: 700;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+.accordion__heading::after {
+	content: "+";
+	font-size: var(--fs-500);
+}
+
+.accordion__body {
+	height: 0px;
+	padding-top: 0.5em;
+	overflow: hidden;
+	transition: height 500ms ease-out;
+	line-height: 1.5em;
+}
+
+.accordion.active .accordion__body {
+	height: 5em;
+	overflow-y: scroll;
+}
+
+.accordion.active .accordion__heading {
+	font-size: 0.9rem;
+}
+
+.accordion.active .accordion__heading::after {
+	content: '-';
+	font-size: var(--fs-500);
+}
+
+/* =====================================
+GENERAL
+===================================== */
+
+.container {
+	background-color: white;
+	color: black;
+	padding: 2em;
+}
