@@ -2,7 +2,7 @@
 
 This is a simple reusable accordion component built using HTML, CSS and Javascript.
 
-## Table of contnets
+## Table of contents
 - [Overview](#overview)
 	- [Features](#features)
 	- [Link](#links)
